@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { type NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
@@ -12,9 +13,15 @@ const Home: NextPage = () => {
       </Head>
       <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c]">
         <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16 ">
-          <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
-            Create <span className="text-[hsl(280,100%,70%)]">T3</span> App
-          </h1>
+          <motion.h1
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 1.1 }}
+            drag={true}
+            dragConstraints={{ left: -100, right: 100, top: -100, bottom: 100 }}
+            className="text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]"
+          >
+            Golf <span className="text-[hsl(280,100%,70%)]">Grab</span>
+          </motion.h1>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8">
             <Link
               className="flex max-w-xs flex-col gap-4 rounded-xl bg-white/10 p-4 text-white hover:bg-white/20"
