@@ -3,29 +3,32 @@ import ThemeSwitch from "./ThemeSwitch.component";
 const Navbar = () => {
   return (
     <>
-      <div className="sticky inset-x-0 top-0 z-50 h-16 w-full border-b-2 border-base-content  bg-base-100">
+      <div className="fixed inset-x-0 top-0 z-50 h-16 w-full border-b-2 border-base-content  bg-base-100">
         <div className="container navbar  mx-auto  ">
           <div className="flex-1">
-            <a className="btn-ghost btn  text-2xl font-bold normal-case md:text-3xl">
+            <a
+              href="#home"
+              className="btn-ghost btn  text-2xl font-bold normal-case md:text-3xl"
+            >
               Golf Grab
             </a>
           </div>
           <div className="flex-none">
             <ul className="menu menu-horizontal  hidden space-x-4 px-1 lg:inline-flex">
               <li>
-                <a>HOME</a>
+                <a href="#home">HOME</a>
               </li>
               <li>
-                <a>ABOUT</a>
+                <a href="#about">ABOUT</a>
               </li>
               <li>
-                <a>SKILLS</a>
+                <a href="#skills">SKILLS</a>
               </li>
               <li>
-                <a>PROJECTS</a>
+                <a href="#projects">PROJECTS</a>
               </li>
               <li>
-                <a>CONTACT</a>
+                <a href="#contact">CONTACT</a>
               </li>
             </ul>
             <a className="btn-accent btn mx-4 hidden text-base font-semibold text-base-100 md:inline-flex">

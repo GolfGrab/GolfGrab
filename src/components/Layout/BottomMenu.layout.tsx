@@ -1,18 +1,60 @@
+import { useEffect, useState } from "react";
+
 interface BottomMenuProps {
   isOpen: boolean;
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const BottomMenu: React.FC<BottomMenuProps> = ({ setIsOpen, isOpen }) => {
+  const [showTopBtn, setShowTopBtn] = useState(false);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 400) {
+        setShowTopBtn(true);
+      } else {
+        setShowTopBtn(false);
+      }
+    });
+  }, []);
+
+  const goToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   return (
     <>
       {!isOpen && (
         <div className="container fixed bottom-0 left-[50%] z-10 translate-x-[-50%] ">
           <div className="card w-full ">
             <div className="card-body p-4">
+              {showTopBtn && (
+                <div className="card-actions justify-end">
+                  <button
+                    className="btn-ghost btn-square  btn "
+                    onClick={() => goToTop()}
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth="2"
+                      stroke="currentColor"
+                      className="h-10 w-10"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M15 11.25l-3-3m0 0l-3 3m3-3v7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              )}
               <div className="card-actions justify-end">
                 <button
-                  className="btn-ghost btn-square  btn"
+                  className="btn-ghost btn-square  btn lg:hidden"
                   onClick={() => setIsOpen(true)}
                 >
                   <svg
