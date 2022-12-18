@@ -1,15 +1,15 @@
 import { ThemeProvider } from "next-themes";
 import { type AppType } from "next/dist/shared/lib/utils";
-import Layout from "../components/Layout";
+import { SectionProvider } from "../contexts/SectionContext";
 
 import "../styles/globals.css";
 
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
     <ThemeProvider defaultTheme="black">
-      <Layout>
+      <SectionProvider>
         <Component {...pageProps} />
-      </Layout>
+      </SectionProvider>
     </ThemeProvider>
   );
 };

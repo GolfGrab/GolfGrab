@@ -1,13 +1,24 @@
+import { useContext } from "react";
+import { SectionContext } from "../../contexts/SectionContext";
+import type { SectionType } from "../Home/sections";
 import ThemeSwitch from "./ThemeSwitch.component";
 
 const Navbar = () => {
+  const { section } = useContext(SectionContext);
+  const allSections: SectionType[] = [
+    "Hero",
+    "About",
+    "Skills",
+    "Projects",
+    "Contact",
+  ];
   return (
     <>
       <div className="fixed inset-x-0 top-0 z-50 h-16 w-full border-b-2 border-base-content  bg-base-100">
         <div className="container navbar  mx-auto  ">
           <div className="flex-1">
             <a
-              href="#home"
+              href="#Hero"
               className="btn-ghost btn  text-2xl font-bold normal-case md:text-3xl"
             >
               Golf Grab
@@ -15,21 +26,20 @@ const Navbar = () => {
           </div>
           <div className="flex-none">
             <ul className="menu menu-horizontal  hidden space-x-4 px-1 lg:inline-flex">
-              <li>
-                <a href="#home">HOME</a>
-              </li>
-              <li>
-                <a href="#about">ABOUT</a>
-              </li>
-              <li>
-                <a href="#skills">SKILLS</a>
-              </li>
-              <li>
-                <a href="#projects">PROJECTS</a>
-              </li>
-              <li>
-                <a href="#contact">CONTACT</a>
-              </li>
+              {allSections.map((sectionName) => (
+                <li key={sectionName}>
+                  <a
+                    href={`#${sectionName}`}
+                    className={` ${
+                      section === sectionName
+                        ? "btn-accent uppercase text-base-100"
+                        : "uppercase"
+                    }`}
+                  >
+                    {sectionName === "Hero" ? "HOME" : sectionName}
+                  </a>
+                </li>
+              ))}
             </ul>
             <a className="btn-accent btn mx-4 hidden text-base font-semibold text-base-100 md:inline-flex">
               <svg

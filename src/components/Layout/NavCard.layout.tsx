@@ -1,4 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
+import { useContext } from "react";
+import { SectionContext } from "../../contexts/SectionContext";
 
 interface NavCardProps {
   isOpen: boolean;
@@ -6,6 +8,8 @@ interface NavCardProps {
 }
 
 const NavCard: React.FC<NavCardProps> = ({ isOpen, setIsOpen }) => {
+  const { section } = useContext(SectionContext);
+
   return (
     <>
       <AnimatePresence>
@@ -27,8 +31,10 @@ const NavCard: React.FC<NavCardProps> = ({ isOpen, setIsOpen }) => {
                 <ul className="menu menu-horizontal  w-full justify-evenly  bg-base-100 p-2">
                   <li>
                     <a
-                      href="#home"
-                      className="w-[25vw] flex-col"
+                      href="#Hero"
+                      className={`w-[25vw] flex-col ${
+                        section === "Hero" ? "bg-accent text-base-100 " : ""
+                      }`}
                       onClick={() => setIsOpen(false)}
                     >
                       <svg
@@ -50,8 +56,10 @@ const NavCard: React.FC<NavCardProps> = ({ isOpen, setIsOpen }) => {
                   </li>
                   <li>
                     <a
-                      href="#about"
-                      className="w-[25vw] flex-col"
+                      href="#About"
+                      className={`w-[25vw] flex-col ${
+                        section === "About" ? "bg-accent text-base-100 " : ""
+                      }`}
                       onClick={() => setIsOpen(false)}
                     >
                       <svg
@@ -73,8 +81,10 @@ const NavCard: React.FC<NavCardProps> = ({ isOpen, setIsOpen }) => {
                   </li>
                   <li>
                     <a
-                      href="#skills"
-                      className="w-[25vw] flex-col"
+                      href="#Skills"
+                      className={`w-[25vw] flex-col ${
+                        section === "Skills" ? "bg-accent text-base-100 " : ""
+                      }`}
                       onClick={() => setIsOpen(false)}
                     >
                       <svg
@@ -98,8 +108,10 @@ const NavCard: React.FC<NavCardProps> = ({ isOpen, setIsOpen }) => {
                 <ul className="menu menu-horizontal  w-full justify-evenly    bg-base-100 p-2">
                   <li>
                     <a
-                      href="#projects"
-                      className="w-[25vw] flex-col"
+                      href="#Projects"
+                      className={`w-[25vw] flex-col ${
+                        section === "Projects" ? "bg-accent text-base-100 " : ""
+                      }`}
                       onClick={() => setIsOpen(false)}
                     >
                       <svg
@@ -121,8 +133,10 @@ const NavCard: React.FC<NavCardProps> = ({ isOpen, setIsOpen }) => {
                   </li>
                   <li>
                     <a
-                      href="#contact"
-                      className="w-[25vw] flex-col"
+                      href="#Contact"
+                      className={`w-[25vw] flex-col ${
+                        section === "Contact" ? "bg-accent text-base-100 " : ""
+                      }`}
                       onClick={() => setIsOpen(false)}
                     >
                       <svg
@@ -144,7 +158,6 @@ const NavCard: React.FC<NavCardProps> = ({ isOpen, setIsOpen }) => {
                   </li>
                   <li>
                     <a
-                      href="#resume"
                       className="w-[25vw] flex-col"
                       onClick={() => setIsOpen(false)}
                     >
