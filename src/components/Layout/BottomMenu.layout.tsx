@@ -1,10 +1,10 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-interface BottomMenuProps {
+type BottomMenuProps = {
   isOpen: boolean;
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
-}
+};
 
 const BottomMenu: React.FC<BottomMenuProps> = ({ setIsOpen, isOpen }) => {
   const [showTopBtn, setShowTopBtn] = useState(false);

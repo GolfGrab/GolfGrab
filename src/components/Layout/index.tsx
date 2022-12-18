@@ -3,9 +3,9 @@ import BottomMenu from "./BottomMenu.layout";
 import Navbar from "./Navbar.layout";
 import NavCard from "./NavCard.layout";
 
-interface LayoutProps {
+type LayoutProps = {
   children: React.ReactNode;
-}
+};
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   const [mounted, setMounted] = useState(false);

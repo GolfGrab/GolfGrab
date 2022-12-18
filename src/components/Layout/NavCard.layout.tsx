@@ -2,10 +2,10 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useContext } from "react";
 import { SectionContext } from "../../contexts/SectionContext";
 
-interface NavCardProps {
+type NavCardProps = {
   isOpen: boolean;
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
-}
+};
 
 const NavCard: React.FC<NavCardProps> = ({ isOpen, setIsOpen }) => {
   const { section } = useContext(SectionContext);
