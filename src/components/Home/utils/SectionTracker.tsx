@@ -3,13 +3,13 @@ import React, { useEffect, useRef } from "react";
 import type { SectionType } from "../sections";
 
 type SectionTrackerProps = {
-  section: SectionType;
-  setSection: ((section: SectionType) => void) | null;
+  sectionName: SectionType;
+  setSection: ((sectionName: SectionType) => void) | null;
   children: React.ReactNode;
 };
 
 const SectionTracker: React.FC<SectionTrackerProps> = ({
-  section,
+  sectionName,
   setSection,
   children,
 }) => {
@@ -18,13 +18,13 @@ const SectionTracker: React.FC<SectionTrackerProps> = ({
 
   useEffect(() => {
     if (isInView) {
-      setSection?.(section);
+      setSection?.(sectionName);
     }
-  }, [isInView, section, setSection]);
+  }, [isInView, sectionName, setSection]);
 
   return (
     <>
-      <section ref={ref} id={section}>
+      <section ref={ref} id={sectionName}>
         {children}
       </section>
     </>

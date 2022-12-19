@@ -13,12 +13,15 @@ import SectionTracker from "../components/Home/utils/SectionTracker";
 import Layout from "../components/Layout";
 import { SectionContext } from "../contexts/SectionContext";
 
-const sectionElements: { key: SectionType; value: JSX.Element }[] = [
-  { key: "Hero", value: <Hero /> },
-  { key: "About", value: <About /> },
-  { key: "Skills", value: <Skills /> },
-  { key: "Projects", value: <Projects /> },
-  { key: "Contact", value: <Contact /> },
+const sectionElements: {
+  sectionName: SectionType;
+  component: React.ReactNode;
+}[] = [
+  { sectionName: "Hero", component: <Hero /> },
+  { sectionName: "About", component: <About /> },
+  { sectionName: "Skills", component: <Skills /> },
+  { sectionName: "Projects", component: <Projects /> },
+  { sectionName: "Contact", component: <Contact /> },
 ];
 
 const Home: NextPage = () => {
@@ -34,11 +37,11 @@ const Home: NextPage = () => {
         <main className="flex min-h-screen flex-col items-center  bg-base-200">
           {sectionElements.map((sectionElement) => (
             <SectionTracker
-              key={sectionElement.key}
-              section={sectionElement.key}
+              key={sectionElement.sectionName}
+              sectionName={sectionElement.sectionName}
               setSection={setSection}
             >
-              {sectionElement.value}
+              {sectionElement.component}
             </SectionTracker>
           ))}
         </main>
