@@ -1,7 +1,6 @@
 import { type NextPage } from "next";
 import Head from "next/head";
 import { useContext } from "react";
-import { InView } from "react-intersection-observer";
 import type { SectionType } from "../components/Home/sections";
 import {
   About,
@@ -10,6 +9,7 @@ import {
   Projects,
   Skills,
 } from "../components/Home/sections";
+import SectionTracker from "../components/Home/utils/SectionTracker";
 import Layout from "../components/Layout";
 import { SectionContext } from "../contexts/SectionContext";
 
@@ -33,17 +33,13 @@ const Home: NextPage = () => {
         </Head>
         <main className="flex min-h-screen flex-col items-center  bg-base-200">
           {sectionElements.map((sectionElement) => (
-            <InView
+            <SectionTracker
               key={sectionElement.key}
-              threshold={0.5}
-              onChange={(inView) => {
-                if (inView) {
-                  setSection?.(sectionElement.key);
-                }
-              }}
+              section={sectionElement.key}
+              setSection={setSection}
             >
               {sectionElement.value}
-            </InView>
+            </SectionTracker>
           ))}
         </main>
       </Layout>
