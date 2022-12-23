@@ -25,7 +25,7 @@ const Navbar = () => {
             </a>
           </div>
           <div className="flex-none">
-            <ul className="menu menu-horizontal  hidden space-x-4 px-1 lg:inline-flex">
+            <ul className="menu menu-horizontal  hidden space-x-4 px-1 xl:inline-flex">
               {allSections.map((sectionName) => (
                 <li key={sectionName}>
                   <a

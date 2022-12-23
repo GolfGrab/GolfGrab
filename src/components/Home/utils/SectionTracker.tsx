@@ -24,7 +24,7 @@ const SectionTracker: React.FC<SectionTrackerProps> = ({
 
   return (
     <>
-      <section ref={ref} id={sectionName}>
+      <section ref={ref} id={sectionName} className="w-full ">
         {children}
       </section>
     </>

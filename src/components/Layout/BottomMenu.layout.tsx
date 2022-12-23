@@ -67,7 +67,7 @@ const BottomMenu: React.FC<BottomMenuProps> = ({ setIsOpen, isOpen }) => {
                 )}
                 <div className="card-actions justify-end">
                   <button
-                    className="btn-ghost btn-square  btn lg:hidden"
+                    className="btn-ghost btn-square  btn xl:hidden"
                     onClick={() => setIsOpen(true)}
                   >
                     <svg

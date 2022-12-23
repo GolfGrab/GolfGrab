@@ -19,7 +19,7 @@ const NavCard: React.FC<NavCardProps> = ({ isOpen, setIsOpen }) => {
             animate={{ y: 0, x: "-50%", opacity: 1 }}
             exit={{ y: 500, x: "-50%", opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="container fixed bottom-0 left-[50%] z-50 translate-x-[-50%] lg:hidden"
+            className="container fixed bottom-0 left-[50%] z-50 translate-x-[-50%] xl:hidden"
           >
             <div
               className="fixed bottom-0 left-[-50vw]   h-[200vh] w-[200vw]  bg-black opacity-30"
