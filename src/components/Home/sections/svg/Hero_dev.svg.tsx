@@ -7,7 +7,8 @@ const Hero_dev_svg = () => {
     visible: {
       pathLength: 1,
       transition: {
-        duration: 3,
+        delay: 0.2,
+        duration: 0.5,
         ease: "easeIn",
       },
     },
@@ -20,7 +21,8 @@ const Hero_dev_svg = () => {
     visible: {
       y: 0,
       transition: {
-        duration: 1,
+        delay: 0.2,
+        duration: 0.5,
         ease: "easeIn",
       },
     },
@@ -29,7 +31,7 @@ const Hero_dev_svg = () => {
   return (
     <motion.svg
       initial={{ opacity: 0, rotate: -10 }}
-      animate={{ opacity: 1, rotate: 0, transition: { duration: 1 } }}
+      animate={{ opacity: 1, rotate: 0, transition: { duration: 0.5 } }}
       width="100%"
       height="100%"
       viewBox="0 0 900 600"
@@ -697,8 +699,8 @@ const Hero_dev_svg = () => {
           y2="154.507"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#fff" />
-          <stop offset="1" stop-color="#EEE" />
+          <stop stopColor="#fff" />
+          <stop offset="1" stopColor="#EEE" />
         </linearGradient>
         <linearGradient
           id="b"
@@ -708,8 +710,8 @@ const Hero_dev_svg = () => {
           y2="183.621"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#fff" />
-          <stop offset="1" stop-color="#EEE" />
+          <stop stopColor="#fff" />
+          <stop offset="1" stopColor="#EEE" />
         </linearGradient>
         <linearGradient
           id="c"
@@ -719,8 +721,8 @@ const Hero_dev_svg = () => {
           y2="311.8"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#fff" />
-          <stop offset="1" stop-color="#EEE" />
+          <stop stopColor="#fff" />
+          <stop offset="1" stopColor="#EEE" />
         </linearGradient>
         <linearGradient
           id="d"
@@ -730,8 +732,8 @@ const Hero_dev_svg = () => {
           y2="390.708"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#fff" />
-          <stop offset="1" stop-color="#EEE" />
+          <stop stopColor="#fff" />
+          <stop offset="1" stopColor="#EEE" />
         </linearGradient>
         <linearGradient
           id="e"
@@ -741,8 +743,8 @@ const Hero_dev_svg = () => {
           y2="351.257"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#fff" />
-          <stop offset="1" stop-color="#EEE" />
+          <stop stopColor="#fff" />
+          <stop offset="1" stopColor="#EEE" />
         </linearGradient>
         <linearGradient
           id="f"
@@ -752,8 +754,8 @@ const Hero_dev_svg = () => {
           y2="351.257"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#fff" />
-          <stop offset="1" stop-color="#EEE" />
+          <stop stopColor="#fff" />
+          <stop offset="1" stopColor="#EEE" />
         </linearGradient>
         <linearGradient
           id="g"
@@ -763,8 +765,8 @@ const Hero_dev_svg = () => {
           y2="351.257"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#fff" />
-          <stop offset="1" stop-color="#EEE" />
+          <stop stopColor="#fff" />
+          <stop offset="1" stopColor="#EEE" />
         </linearGradient>
         <linearGradient
           id="h"
@@ -774,8 +776,8 @@ const Hero_dev_svg = () => {
           y2="311.8"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#fff" />
-          <stop offset="1" stop-color="#EEE" />
+          <stop stopColor="#fff" />
+          <stop offset="1" stopColor="#EEE" />
         </linearGradient>
         <linearGradient
           id="i"
@@ -785,8 +787,8 @@ const Hero_dev_svg = () => {
           y2="390.708"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#fff" />
-          <stop offset="1" stop-color="#EEE" />
+          <stop stopColor="#fff" />
+          <stop offset="1" stopColor="#EEE" />
         </linearGradient>
         <linearGradient
           id="j"
@@ -796,8 +798,8 @@ const Hero_dev_svg = () => {
           y2="170.586"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#fff" />
-          <stop offset="1" stop-color="#EEE" />
+          <stop stopColor="#fff" />
+          <stop offset="1" stopColor="#EEE" />
         </linearGradient>
         <linearGradient
           id="k"
@@ -807,8 +809,8 @@ const Hero_dev_svg = () => {
           y2="264.414"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#fff" />
-          <stop offset="1" stop-color="#EEE" />
+          <stop stopColor="#fff" />
+          <stop offset="1" stopColor="#EEE" />
         </linearGradient>
         <linearGradient
           id="l"
@@ -818,8 +820,8 @@ const Hero_dev_svg = () => {
           y2="343.323"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#fff" />
-          <stop offset="1" stop-color="#EEE" />
+          <stop stopColor="#fff" />
+          <stop offset="1" stopColor="#EEE" />
         </linearGradient>
         <linearGradient
           id="m"
@@ -829,8 +831,8 @@ const Hero_dev_svg = () => {
           y2="303.871"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#fff" />
-          <stop offset="1" stop-color="#EEE" />
+          <stop stopColor="#fff" />
+          <stop offset="1" stopColor="#EEE" />
         </linearGradient>
         <linearGradient
           id="n"
@@ -840,8 +842,8 @@ const Hero_dev_svg = () => {
           y2="303.871"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#fff" />
-          <stop offset="1" stop-color="#EEE" />
+          <stop stopColor="#fff" />
+          <stop offset="1" stopColor="#EEE" />
         </linearGradient>
         <linearGradient
           id="o"
@@ -851,8 +853,8 @@ const Hero_dev_svg = () => {
           y2="303.871"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#fff" />
-          <stop offset="1" stop-color="#EEE" />
+          <stop stopColor="#fff" />
+          <stop offset="1" stopColor="#EEE" />
         </linearGradient>
         <linearGradient
           id="p"
@@ -862,8 +864,8 @@ const Hero_dev_svg = () => {
           y2="264.414"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#fff" />
-          <stop offset="1" stop-color="#EEE" />
+          <stop stopColor="#fff" />
+          <stop offset="1" stopColor="#EEE" />
         </linearGradient>
         <linearGradient
           id="q"
@@ -873,8 +875,8 @@ const Hero_dev_svg = () => {
           y2="343.323"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#fff" />
-          <stop offset="1" stop-color="#EEE" />
+          <stop stopColor="#fff" />
+          <stop offset="1" stopColor="#EEE" />
         </linearGradient>
         <linearGradient
           id="r"
@@ -884,8 +886,8 @@ const Hero_dev_svg = () => {
           y2="120.053"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#fff" />
-          <stop offset="1" stop-color="#EEE" />
+          <stop stopColor="#fff" />
+          <stop offset="1" stopColor="#EEE" />
         </linearGradient>
         <linearGradient
           id="s"
@@ -895,8 +897,8 @@ const Hero_dev_svg = () => {
           y2="198.961"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#fff" />
-          <stop offset="1" stop-color="#EEE" />
+          <stop stopColor="#fff" />
+          <stop offset="1" stopColor="#EEE" />
         </linearGradient>
         <linearGradient
           id="t"
@@ -906,8 +908,8 @@ const Hero_dev_svg = () => {
           y2="159.51"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#fff" />
-          <stop offset="1" stop-color="#EEE" />
+          <stop stopColor="#fff" />
+          <stop offset="1" stopColor="#EEE" />
         </linearGradient>
         <linearGradient
           id="u"
@@ -917,8 +919,8 @@ const Hero_dev_svg = () => {
           y2="159.51"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#fff" />
-          <stop offset="1" stop-color="#EEE" />
+          <stop stopColor="#fff" />
+          <stop offset="1" stopColor="#EEE" />
         </linearGradient>
         <linearGradient
           id="v"
@@ -928,8 +930,8 @@ const Hero_dev_svg = () => {
           y2="159.51"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#fff" />
-          <stop offset="1" stop-color="#EEE" />
+          <stop stopColor="#fff" />
+          <stop offset="1" stopColor="#EEE" />
         </linearGradient>
         <linearGradient
           id="w"
@@ -939,8 +941,8 @@ const Hero_dev_svg = () => {
           y2="120.053"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#fff" />
-          <stop offset="1" stop-color="#EEE" />
+          <stop stopColor="#fff" />
+          <stop offset="1" stopColor="#EEE" />
         </linearGradient>
         <linearGradient
           id="x"
@@ -950,8 +952,8 @@ const Hero_dev_svg = () => {
           y2="198.961"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#fff" />
-          <stop offset="1" stop-color="#EEE" />
+          <stop stopColor="#fff" />
+          <stop offset="1" stopColor="#EEE" />
         </linearGradient>
       </defs>
     </motion.svg>
