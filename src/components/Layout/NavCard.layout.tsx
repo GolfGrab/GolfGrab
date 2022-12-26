@@ -26,7 +26,7 @@ const NavCard: React.FC<NavCardProps> = ({ isOpen, setIsOpen }) => {
               onClick={() => setIsOpen(false)}
             />
 
-            <div className="card w-full rounded-b-none border-4 border-primary bg-base-100">
+            <div className="card w-full rounded-b-none  bg-base-100">
               <div className="card-body p-4">
                 <ul className="menu menu-horizontal  w-full justify-evenly  bg-base-100 p-2">
                   <li>

@@ -1,9 +1,15 @@
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+import { useState } from "react";
 import Hero_dev_svg from "../sections/svg/Hero_dev.svg";
 // import Hero_dev_with_tech from "../sections/svg/Hero_dev_with_tech.svg";
-import { BrandIconFramer } from "./svg/brandIcon";
+import { BrandIconFramer, branIcons } from "./svg/brandIcon";
 
 const Hero = () => {
+  const [headingText, setHeadingText] = useState("Full Stack");
+  const headingTexts = [
+    "Full Stack",
+    ...branIcons.map(({ iconName }) => iconName),
+  ];
   const propsSvg = {
     initial: { opacity: 0.6, scale: 0.8, rotate: -15 },
     animate: {
@@ -11,10 +17,10 @@ const Hero = () => {
       scale: 1,
       rotate: 0,
 
-      stiffness: 100,
       transition: {
-        duration: 0.5,
+        duration: 2,
         type: "spring",
+        stiffness: 500,
       },
     },
 
@@ -24,35 +30,93 @@ const Hero = () => {
   };
 
   const propsPath = {};
-  const svgClassNames = "h-12 w-12 2xl:h-14 2xl:w-14";
+  const svgClassNames = "h-12 w-12 2xl:h-14 2xl:w-14 px-1";
   return (
     <div className="container  hero relative mx-auto  min-h-screen bg-base-200 py-16 ">
       <div className="hero-content w-full flex-col justify-between p-6  lg:flex-row-reverse ">
         {/* svg side */}
-        <div className="flex flex-1 flex-col  justify-center">
+        <motion.div>
           <Hero_dev_svg />
           {/* <Hero_dev_with_tech /> */}
           <div className="hidden justify-between lg:flex">
             {BrandIconFramer(propsSvg, propsPath, svgClassNames).map(
               ({ iconName, iconSVG }) => (
-                <div key={iconName}>{iconSVG}</div>
+                <motion.div
+                  key={iconName}
+                  onHoverStart={() => setHeadingText(iconName)}
+                >
+                  {iconSVG}
+                </motion.div>
               )
             )}
           </div>
-        </div>
+        </motion.div>
         {/* text side */}
-        <div className="relative flex flex-1  flex-col justify-center">
-          <h1 className=" mb-4 font-sans  text-2xl font-semibold text-secondary lg:text-4xl 2xl:text-4xl">
+        <motion.div
+          layout
+          transition={{ duration: 1 }}
+          className="relative flex flex-1  flex-col justify-center"
+        >
+          <motion.h1
+            layout
+            transition={{ duration: 1 }}
+            className=" mb-4 font-sans  text-2xl font-semibold text-secondary lg:text-4xl 2xl:text-4xl"
+          >
             Hi, I{`'`}m Golf <br />
             Surapus Moonjaras
-          </h1>
-          <h2 className=" font-sans text-6xl font-semibold text-primary lg:text-7xl 2xl:text-8xl">
-            Full Stack
-          </h2>
-          <h2 className=" font-sans text-6xl font-semibold text-primary lg:text-7xl 2xl:text-8xl">
+          </motion.h1>
+          <AnimatePresence>
+            (
+            {headingTexts.map(
+              (iconName) =>
+                iconName === headingText && (
+                  <motion.h2
+                    key={iconName}
+                    className=" font-sans text-6xl font-semibold text-primary lg:text-7xl 2xl:text-8xl"
+                    initial={{ opacity: 0, x: -100, position: "absolute" }}
+                    animate={{
+                      opacity: 1,
+                      x: 0,
+                      position: "relative",
+
+                      transition: {
+                        duration: 0.5,
+                        type: "spring",
+                        stiffness: 100,
+                      },
+                    }}
+                    exit={{
+                      opacity: 0,
+                      position: "absolute",
+                      y: 100,
+                      transition: {
+                        duration: 0.5,
+                        ease: "easeInOut",
+                      },
+                    }}
+                  >
+                    {headingText}
+                  </motion.h2>
+                )
+            )}
+            )
+          </AnimatePresence>
+
+          <motion.h2
+            layout
+            transition={{ duration: 1 }}
+            className=" font-sans text-6xl font-semibold text-primary lg:text-7xl 2xl:text-8xl"
+          >
             Developer
-          </h2>
-          <div className=" bottom-0 mt-16 inline-flex justify-between lg:w-fit lg:justify-start lg:space-x-4">
+          </motion.h2>
+          <motion.p
+            layout
+            transition={{ duration: 1 }}
+            className="mt-4 text-lg text-secondary lg:text-xl"
+          >
+            Who will make your dream project come true
+          </motion.p>
+          <div className=" bottom-0 mt-8 inline-flex justify-between lg:w-fit lg:justify-start lg:space-x-4">
             <a href="#Contact" className="btn-primary btn  gap-2">
               contact me
               <svg
@@ -88,7 +152,7 @@ const Hero = () => {
               </svg>
             </a>
           </div>
-        </div>
+        </motion.div>
       </div>
       <motion.a
         initial={{ opacity: 0 }}

@@ -2,7 +2,24 @@ import { motion } from "framer-motion";
 
 export const branIcons = [
   {
-    iconName: "react",
+    iconName: "Front End",
+    iconSVG: (
+      <svg
+        stroke="currentColor"
+        fill="currentColor"
+        strokeWidth={0}
+        viewBox="0 0 24 24"
+        height="1em"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path fill="none" d="M0 0h24v24H0z" />
+        <path d="M4 6h18V4H4c-1.1 0-2 .9-2 2v11H0v3h14v-3H4V6zm19 2h-6c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V9c0-.55-.45-1-1-1zm-1 9h-4v-7h4v7z" />
+      </svg>
+    ),
+  },
+  {
+    iconName: "React JS",
     iconSVG: (
       <svg
         stroke="currentColor"
@@ -21,7 +38,7 @@ export const branIcons = [
   },
 
   {
-    iconName: "tailwind",
+    iconName: "Tailwind CSS",
     iconSVG: (
       <svg
         stroke="currentColor"
@@ -40,7 +57,7 @@ export const branIcons = [
   },
 
   {
-    iconName: "framermotion",
+    iconName: "Framer Motion",
     iconSVG: (
       <svg
         stroke="currentColor"
@@ -58,7 +75,7 @@ export const branIcons = [
     ),
   },
   {
-    iconName: "typescript",
+    iconName: "TypeScript",
     iconSVG: (
       <svg
         stroke="currentColor"
@@ -76,7 +93,7 @@ export const branIcons = [
     ),
   },
   {
-    iconName: "javascript",
+    iconName: "JavaScript",
     iconSVG: (
       <svg
         stroke="currentColor"
@@ -94,7 +111,7 @@ export const branIcons = [
     ),
   },
   {
-    iconName: "nextjs",
+    iconName: "Next JS",
     iconSVG: (
       <svg
         stroke="currentColor"
@@ -113,7 +130,7 @@ export const branIcons = [
   },
 
   {
-    iconName: "nestjs",
+    iconName: "Nest JS",
     iconSVG: (
       <svg
         stroke="currentColor"
@@ -131,7 +148,7 @@ export const branIcons = [
     ),
   },
   {
-    iconName: "prisma",
+    iconName: "Prisma",
     iconSVG: (
       <svg
         stroke="currentColor"
@@ -149,7 +166,7 @@ export const branIcons = [
     ),
   },
   {
-    iconName: "database",
+    iconName: "Back End",
     iconSVG: (
       <svg
         stroke="currentColor"
@@ -182,7 +199,29 @@ export const BrandIconFramer = (
 ) => {
   return [
     {
-      iconName: "react",
+      iconName: "Front End",
+      iconSVG: (
+        <motion.svg
+          className={svgClassNames}
+          stroke="currentColor"
+          fill="currentColor"
+          strokeWidth={0}
+          viewBox="0 0 24 24"
+          height="1em"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+          {...propsSvg}
+        >
+          <motion.path {...propsPath} fill="none" d="M0 0h24v24H0z" />
+          <motion.path
+            {...propsPath}
+            d="M4 6h18V4H4c-1.1 0-2 .9-2 2v11H0v3h14v-3H4V6zm19 2h-6c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V9c0-.55-.45-1-1-1zm-1 9h-4v-7h4v7z"
+          />
+        </motion.svg>
+      ),
+    },
+    {
+      iconName: "React JS",
       iconSVG: (
         <motion.svg
           className={svgClassNames}
@@ -206,7 +245,7 @@ export const BrandIconFramer = (
     },
 
     {
-      iconName: "tailwind",
+      iconName: "Tailwind CSS",
       iconSVG: (
         <motion.svg
           className={svgClassNames}
@@ -230,7 +269,7 @@ export const BrandIconFramer = (
     },
 
     {
-      iconName: "framermotion",
+      iconName: "Framer Motion",
       iconSVG: (
         <motion.svg
           className={svgClassNames}
@@ -253,7 +292,7 @@ export const BrandIconFramer = (
       ),
     },
     {
-      iconName: "typescript",
+      iconName: "TypeScript",
       iconSVG: (
         <motion.svg
           className={svgClassNames}
@@ -276,7 +315,7 @@ export const BrandIconFramer = (
       ),
     },
     {
-      iconName: "javascript",
+      iconName: "JavaScript",
       iconSVG: (
         <motion.svg
           className={svgClassNames}
@@ -299,7 +338,7 @@ export const BrandIconFramer = (
       ),
     },
     {
-      iconName: "nextjs",
+      iconName: "Next JS",
       iconSVG: (
         <motion.svg
           className={svgClassNames}
@@ -323,7 +362,7 @@ export const BrandIconFramer = (
     },
 
     {
-      iconName: "nestjs",
+      iconName: "Nest JS",
       iconSVG: (
         <motion.svg
           className={svgClassNames}
@@ -346,7 +385,7 @@ export const BrandIconFramer = (
       ),
     },
     {
-      iconName: "prisma",
+      iconName: "Prisma",
       iconSVG: (
         <motion.svg
           className={svgClassNames}
@@ -369,7 +408,7 @@ export const BrandIconFramer = (
       ),
     },
     {
-      iconName: "database",
+      iconName: "Back End",
       iconSVG: (
         <motion.svg
           className={svgClassNames}
