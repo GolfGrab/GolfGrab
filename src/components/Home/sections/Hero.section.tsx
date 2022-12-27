@@ -1,15 +1,32 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Hero_dev_svg from "../sections/svg/Hero_dev.svg";
 // import Hero_dev_with_tech from "../sections/svg/Hero_dev_with_tech.svg";
 import { BrandIconFramer, branIcons } from "./svg/brandIcon";
 
 const Hero = () => {
   const [headingText, setHeadingText] = useState("Full Stack");
+
   const headingTexts = [
     "Full Stack",
     ...branIcons.map(({ iconName }) => iconName),
   ];
+
+  const [showScrollDown, setShowScrollDown] = useState(true);
+  const scrollHandler = () => {
+    if (window.scrollY > window.innerHeight / 2) {
+      setShowScrollDown(false);
+    } else {
+      setShowScrollDown(true);
+    }
+  };
+  useEffect(() => {
+    window.addEventListener("scroll", scrollHandler);
+
+    return () => {
+      window.removeEventListener("scroll", scrollHandler);
+    };
+  }, []);
   const propsSvg = {
     initial: { opacity: 0.6, scale: 0.8, rotate: -15 },
     animate: {
@@ -35,7 +52,7 @@ const Hero = () => {
     <div className="container  hero relative mx-auto  min-h-screen bg-base-200 py-16 ">
       <div className="hero-content w-full flex-col justify-between p-6  lg:flex-row-reverse ">
         {/* svg side */}
-        <motion.div>
+        <motion.div className="opacity-90">
           <Hero_dev_svg />
           {/* <Hero_dev_with_tech /> */}
           <div className="hidden justify-between lg:flex">
@@ -60,7 +77,7 @@ const Hero = () => {
           <motion.h1
             layout
             transition={{ duration: 1 }}
-            className=" mb-4 font-sans  text-2xl font-semibold text-secondary lg:text-4xl 2xl:text-4xl"
+            className=" opacity-85 mb-4  font-sans text-2xl font-semibold text-secondary lg:text-4xl 2xl:text-4xl"
           >
             Hi, I{`'`}m Golf <br />
             Surapus Moonjaras
@@ -72,12 +89,17 @@ const Hero = () => {
                 iconName === headingText && (
                   <motion.h2
                     key={iconName}
-                    className=" font-sans text-6xl font-semibold text-primary lg:text-7xl 2xl:text-8xl"
-                    initial={{ opacity: 0, x: -100, position: "absolute" }}
+                    className=" font-sans text-6xl font-semibold text-primary  lg:text-7xl 2xl:text-8xl"
+                    initial={{
+                      opacity: 0,
+                      x: -100,
+                      y: -50,
+                      position: "absolute",
+                    }}
                     animate={{
                       opacity: 1,
                       x: 0,
-                      position: "relative",
+                      position: "absolute",
 
                       transition: {
                         duration: 0.5,
@@ -87,11 +109,11 @@ const Hero = () => {
                     }}
                     exit={{
                       opacity: 0,
+                      x: 100,
                       position: "absolute",
-                      y: 100,
                       transition: {
-                        duration: 0.5,
-                        ease: "easeInOut",
+                        duration: 0.2,
+                        ease: "easeOut",
                       },
                     }}
                   >
@@ -105,25 +127,30 @@ const Hero = () => {
           <motion.h2
             layout
             transition={{ duration: 1 }}
-            className=" font-sans text-6xl font-semibold text-primary lg:text-7xl 2xl:text-8xl"
+            className=" font-sans text-5xl font-semibold text-primary lg:text-6xl 2xl:text-7xl"
           >
-            Developer
+            <br />
+            <br /> Developer
           </motion.h2>
           <motion.p
             layout
             transition={{ duration: 1 }}
-            className="mt-4 text-lg text-secondary lg:text-xl"
+            className="mt-4 text-base  text-secondary opacity-80 sm:text-lg sm:font-semibold lg:text-xl"
           >
-            Who will make your dream project come true
+            who will make your dream project
+            <br className="sm:hidden" /> come true
           </motion.p>
           <div className=" bottom-0 mt-8 inline-flex justify-between lg:w-fit lg:justify-start lg:space-x-4">
-            <a href="#Contact" className="btn-primary btn  gap-2">
+            <a
+              href="#Contact"
+              className="btn-primary btn gap-2 font-semibold transition-transform duration-300 ease-in-out hover:scale-110"
+            >
               contact me
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                strokeWidth={3}
+                strokeWidth={1.5}
                 stroke="currentColor"
                 className="hidden h-6 w-6 lg:block"
               >
@@ -134,7 +161,10 @@ const Hero = () => {
                 />
               </svg>
             </a>
-            <a href="#About" className="btn-outline btn-primary btn  gap-2">
+            <a
+              href="#About"
+              className="btn-outline btn-primary btn gap-2 font-semibold transition-transform duration-300 ease-in-out hover:scale-110"
+            >
               learn more
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -154,35 +184,45 @@ const Hero = () => {
           </div>
         </motion.div>
       </div>
-      <motion.a
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1, transition: { delay: 5, duration: 1 } }}
-        className="absolute bottom-16 left-4 text-center text-xs lg:left-auto"
-        href="#About"
-      >
-        MORE
-      </motion.a>
-      <motion.a
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1, transition: { delay: 5, duration: 1 } }}
-        className="absolute bottom-4 left-4   lg:left-auto "
-        href="#About"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth={1.5}
-          stroke="currentColor"
-          className="h-10 w-10 animate-bounce duration-1000"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M9 12.75l3 3m0 0l3-3m-3 3v-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-          />
-        </svg>
-      </motion.a>
+      <AnimatePresence>
+        {showScrollDown && (
+          <motion.a
+            key={111}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1, transition: { delay: 5, duration: 1 } }}
+            exit={{ opacity: 0, transition: { duration: 1 } }}
+            className="absolute bottom-16 left-4 text-center text-xs lg:left-auto"
+            href="#About"
+          >
+            MORE
+          </motion.a>
+        )}
+        {showScrollDown && (
+          <motion.a
+            key={222}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1, transition: { delay: 5, duration: 1 } }}
+            exit={{ opacity: 0, transition: { duration: 1 } }}
+            className="absolute bottom-4 left-4   lg:left-auto "
+            href="#About"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="h-10 w-10 animate-bounce duration-1000"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M9 12.75l3 3m0 0l3-3m-3 3v-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+          </motion.a>
+        )}
+      </AnimatePresence>
     </div>
   );
 };

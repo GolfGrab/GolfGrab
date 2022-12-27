@@ -9,7 +9,7 @@ type BottomMenuProps = {
 const BottomMenu: React.FC<BottomMenuProps> = ({ setIsOpen, isOpen }) => {
   const [showTopBtn, setShowTopBtn] = useState(false);
   const scrollHandler = () => {
-    if (window.scrollY > 400) {
+    if (window.scrollY > (window.innerHeight * 2) / 3) {
       setShowTopBtn(true);
     } else {
       setShowTopBtn(false);
