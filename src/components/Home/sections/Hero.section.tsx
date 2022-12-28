@@ -199,6 +199,7 @@ const Hero = () => {
         )}
         {showScrollDown && (
           <motion.a
+            aria-label="Scroll Down Button To About Section"
             key={222}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, transition: { delay: 5, duration: 1 } }}
@@ -207,6 +208,7 @@ const Hero = () => {
             href="#About"
           >
             <svg
+              aria-label="down arrow"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"

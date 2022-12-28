@@ -8,6 +8,7 @@ const ThemeSwitch = () => {
       <div className="form-control pr-4">
         <label className="swap-rotate swap">
           <input
+            aria-label="Toggle Dark Mode"
             type="checkbox"
             defaultChecked={theme !== "black"}
             onClick={() => {

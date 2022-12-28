@@ -159,6 +159,7 @@ const NavCard: React.FC<NavCardProps> = ({ isOpen, setIsOpen }) => {
                   <li>
                     <a
                       className="w-[25vw] flex-col"
+                      href="#"
                       onClick={() => setIsOpen(false)}
                     >
                       <svg

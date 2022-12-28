@@ -38,7 +38,7 @@ const About = () => {
           {/* text side */}
           <motion.div className="flex flex-1 flex-col">
             <div className="flex flex-row gap-2">
-              <div className="card-compact card flex-1 bg-base-100 shadow-xl">
+              <div className="card card-compact flex-1 bg-base-100 shadow-xl">
                 <figure className="px-4 pt-4">
                   <motion.svg
                     initial={{ transform: "scale(0)" }}
@@ -72,7 +72,7 @@ const About = () => {
                   <p className=" mx-auto text-xs lg:text-sm">dev fast</p>
                 </div>
               </div>
-              <div className="card-compact card flex-1 bg-base-100 shadow-xl">
+              <div className="card card-compact flex-1 bg-base-100 shadow-xl">
                 <figure className="px-4 pt-4">
                   <motion.svg
                     initial={{ transform: "scale(0)" }}
@@ -106,7 +106,7 @@ const About = () => {
                   <p className=" mx-auto text-xs lg:text-sm">smart</p>
                 </div>
               </div>
-              <div className="card-compact card flex-1 bg-base-100 shadow-xl">
+              <div className="card card-compact flex-1 bg-base-100 shadow-xl">
                 <figure className="px-4 pt-4">
                   <motion.svg
                     initial={{ transform: "scale(0)" }}
@@ -151,7 +151,10 @@ const About = () => {
 
               {`Thank you for visiting my page!`}
             </p>
-            <a className="btn-accent btn ml-auto mr-0 hidden  text-base font-semibold text-base-100 lg:flex">
+            <a
+              className="btn-accent btn ml-auto mr-0 hidden  text-base font-semibold text-base-100 lg:flex"
+              href="#"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"

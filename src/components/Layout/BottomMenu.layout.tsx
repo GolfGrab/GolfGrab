@@ -45,6 +45,7 @@ const BottomMenu: React.FC<BottomMenuProps> = ({ setIsOpen, isOpen }) => {
                 {showTopBtn && (
                   <div className="card-actions justify-end">
                     <button
+                      aria-label="Go to top button"
                       className="btn-ghost btn-square  btn "
                       onClick={() => goToTop()}
                     >
@@ -67,6 +68,7 @@ const BottomMenu: React.FC<BottomMenuProps> = ({ setIsOpen, isOpen }) => {
                 )}
                 <div className="card-actions justify-end">
                   <button
+                    aria-label="Open menu button"
                     className="btn-ghost btn-square  btn xl:hidden"
                     onClick={() => setIsOpen(true)}
                   >

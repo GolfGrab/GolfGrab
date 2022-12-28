@@ -41,7 +41,10 @@ const Navbar = () => {
                 </li>
               ))}
             </ul>
-            <a className="btn-accent btn mx-4 hidden text-base font-semibold text-base-100 md:inline-flex">
+            <a
+              className="btn-accent btn mx-4 hidden text-base font-semibold text-base-100 md:inline-flex"
+              href="#"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
