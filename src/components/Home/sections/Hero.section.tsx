@@ -1,8 +1,8 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import Hero_dev_svg from "../sections/svg/Hero_dev.svg";
+import Hero_dev_svg from "../svg/Hero_dev.svg";
 // import Hero_dev_with_tech from "../sections/svg/Hero_dev_with_tech.svg";
-import { BrandIconFramer, branIcons } from "./svg/brandIcon";
+import { BrandIconFramer, branIcons } from "../svg/brandIcon";
 
 const Hero = () => {
   const [headingText, setHeadingText] = useState("Full Stack");

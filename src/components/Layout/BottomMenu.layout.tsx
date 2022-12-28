@@ -41,7 +41,7 @@ const BottomMenu: React.FC<BottomMenuProps> = ({ setIsOpen, isOpen }) => {
             className="container fixed bottom-0 left-[50%] z-10 translate-x-[-50%] "
           >
             <div className="card w-full ">
-              <div className="card-body p-4">
+              <div className="card-body flex-row justify-end p-4">
                 {showTopBtn && (
                   <div className="card-actions justify-end">
                     <button
