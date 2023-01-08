@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import SectionHeader from "../../elements/SectionHeader";
 // import Image from "next/image";
 import { TrackCursorImg } from "../utils/TrackCursorImg";
 
@@ -8,29 +9,10 @@ const About = () => {
       <div className="container  hero relative mx-auto  min-h-screen bg-base-200 py-16 ">
         <div className="hero-content w-full flex-col justify-between pb-6 pt-24  lg:flex-row">
           {/* section text */}
-          <div className="absolute top-24 left-0 right-0 text-center ">
-            <motion.h1
-              initial={{ scale: 0.8, opacity: 0 }}
-              whileInView={{
-                scale: 1,
-                opacity: 1,
-                transition: { duration: 1 },
-              }}
-              className="text-3xl font-semibold text-primary xl:text-4xl"
-            >
-              ABOUT ME
-            </motion.h1>
-            <motion.h2
-              initial={{ opacity: 0 }}
-              whileInView={{
-                opacity: 1,
-                transition: { duration: 1, delay: 0.5 },
-              }}
-              className="text-md    opacity-80 xl:text-lg"
-            >
-              learn more about me
-            </motion.h2>
-          </div>
+          <SectionHeader
+            sectionName="ABOUT ME"
+            description="learn more about me"
+          />
           {/* photo side */}
           <motion.div className="flex-1">
             <TrackCursorImg url="/GolfGrab.jfif" angle={5} />
@@ -38,7 +20,7 @@ const About = () => {
           {/* text side */}
           <motion.div className="flex flex-1 flex-col">
             <div className="flex flex-row gap-2">
-              <div className="card card-compact flex-1 bg-base-100 shadow-xl">
+              <div className="card-compact card flex-1 bg-base-100 shadow-xl">
                 <figure className="px-4 pt-4">
                   <motion.svg
                     initial={{ transform: "scale(0)" }}
@@ -72,7 +54,7 @@ const About = () => {
                   <p className=" mx-auto text-xs lg:text-sm">dev fast</p>
                 </div>
               </div>
-              <div className="card card-compact flex-1 bg-base-100 shadow-xl">
+              <div className="card-compact card flex-1 bg-base-100 shadow-xl">
                 <figure className="px-4 pt-4">
                   <motion.svg
                     initial={{ transform: "scale(0)" }}
@@ -106,7 +88,7 @@ const About = () => {
                   <p className=" mx-auto text-xs lg:text-sm">smart</p>
                 </div>
               </div>
-              <div className="card card-compact flex-1 bg-base-100 shadow-xl">
+              <div className="card-compact card flex-1 bg-base-100 shadow-xl">
                 <figure className="px-4 pt-4">
                   <motion.svg
                     initial={{ transform: "scale(0)" }}
@@ -142,11 +124,9 @@ const About = () => {
               </div>
             </div>
             <p className="pt-6 text-lg">
-              {`Hi, I'm GolfGrab! I'm a Thai college student with a strong interest in web development.`}
+              {`Hi, I'm GolfGrab (Surapus). I'm a Thai college student with a strong interest in web development.`}
               <span className="hidden lg:inline">
-                {`I'm always looking for new opportunities to learn and grow. In
-                my free time, I enjoy watching some tech youtube to staying up
-                to date with the latest technologies.`}
+                {` I have experience with languages such as HTML, CSS, JavaScript, TypeScript, and others, and have built several projects using the React library. I'm always looking for new opportunities to learn and grow. In my free time, I enjoy watching tech YouTube videos to stay up to date with the latest technologies. `}
               </span>
 
               {`Thank you for visiting my page!`}
