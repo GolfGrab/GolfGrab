@@ -34,32 +34,32 @@ const Skills = () => {
             <h2 className=" pt-5 text-center text-2xl">FRONT END</h2>
             <div className="flex flex-row  flex-wrap justify-center gap-2">
               <CompactCard
-                icon={brandIconFramer[0]?.iconSVG}
+                figure={brandIconFramer[0]?.iconSVG}
                 title={brandIconFramer[0]?.iconName}
                 description="Intermediate"
                 fixWidth={true}
               />
               <CompactCard
-                icon={brandIconFramer[3]?.iconSVG}
+                figure={brandIconFramer[3]?.iconSVG}
                 title={brandIconFramer[3]?.iconName}
                 description="Familiarity"
                 fixWidth={true}
               />
 
               <CompactCard
-                icon={brandIconFramer[1]?.iconSVG}
+                figure={brandIconFramer[1]?.iconSVG}
                 title={brandIconFramer[1]?.iconName}
                 description="Intermediate"
                 fixWidth={true}
               />
               <CompactCard
-                icon={brandIconFramer[2]?.iconSVG}
+                figure={brandIconFramer[2]?.iconSVG}
                 title={brandIconFramer[2]?.iconName}
                 description="Beginner"
                 fixWidth={true}
               />
               <CompactCard
-                icon={brandIconFramer[4]?.iconSVG}
+                figure={brandIconFramer[4]?.iconSVG}
                 title={brandIconFramer[4]?.iconName}
                 description="Familiarity"
                 fixWidth={true}
@@ -71,25 +71,25 @@ const Skills = () => {
             <h2 className=" pt-5 text-center text-2xl">PROGRAMING LANGUAGE</h2>
             <div className="flex flex-row  flex-wrap justify-center gap-2">
               <CompactCard
-                icon={brandIconFramer[5]?.iconSVG}
+                figure={brandIconFramer[5]?.iconSVG}
                 title={brandIconFramer[5]?.iconName}
                 description="Intermediate"
                 fixWidth={true}
               />
               <CompactCard
-                icon={brandIconFramer[6]?.iconSVG}
+                figure={brandIconFramer[6]?.iconSVG}
                 title={brandIconFramer[6]?.iconName}
                 description="Intermediate"
                 fixWidth={true}
               />
               <CompactCard
-                icon={brandIconFramer[7]?.iconSVG}
+                figure={brandIconFramer[7]?.iconSVG}
                 title={brandIconFramer[7]?.iconName}
                 description="Intermediate"
                 fixWidth={true}
               />
               <CompactCard
-                icon={brandIconFramer[8]?.iconSVG}
+                figure={brandIconFramer[8]?.iconSVG}
                 title={brandIconFramer[8]?.iconName}
                 description="Beginner"
                 fixWidth={true}
@@ -104,26 +104,26 @@ const Skills = () => {
             <h3 className=" text-center ">[ low interested at this time ]</h3>
             <div className="flex flex-row  flex-wrap justify-center gap-2">
               <CompactCard
-                icon={brandIconFramer[12]?.iconSVG}
+                figure={brandIconFramer[12]?.iconSVG}
                 title={brandIconFramer[12]?.iconName}
                 description="Intermediate"
                 fixWidth={true}
               />
               <CompactCard
-                icon={brandIconFramer[11]?.iconSVG}
+                figure={brandIconFramer[11]?.iconSVG}
                 title={brandIconFramer[11]?.iconName}
                 description="Beginner"
                 fixWidth={true}
               />
 
               <CompactCard
-                icon={brandIconFramer[10]?.iconSVG}
+                figure={brandIconFramer[10]?.iconSVG}
                 title={brandIconFramer[10]?.iconName}
                 description="Intermediate"
                 fixWidth={true}
               />
               <CompactCard
-                icon={
+                figure={
                   <motion.img
                     {...propsSvg}
                     src="https://raw.githubusercontent.com/gin-gonic/logo/master/wb.svg"
@@ -137,7 +137,7 @@ const Skills = () => {
                 fixWidth={true}
               />
               <CompactCard
-                icon={brandIconFramer[9]?.iconSVG}
+                figure={brandIconFramer[9]?.iconSVG}
                 title={brandIconFramer[9]?.iconName}
                 description="Intermediate"
                 fixWidth={true}
