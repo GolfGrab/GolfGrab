@@ -30,7 +30,6 @@ const CardProject: React.FC<CardProjectProps> = ({
       }
       title={title}
       description={description}
-      exClassName="hover:scale-110 transition-transform ease-in-out"
       action={
         <>
           <Link href={hrefWebsite} className="btn-square btn ">

@@ -38,10 +38,10 @@ const BottomMenu: React.FC<BottomMenuProps> = ({ setIsOpen, isOpen }) => {
             animate={{ y: 0, x: "-50%", opacity: 1 }}
             exit={{ y: 500, x: "-50%", opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="container fixed bottom-0 left-[50%] z-10 translate-x-[-50%] "
+            className="container pointer-events-none fixed bottom-0 left-[50%] z-10 translate-x-[-50%]"
           >
-            <div className="card w-full ">
-              <div className="card-body flex-row justify-end p-4">
+            <div className="card ml-auto w-fit ">
+              <div className="card-body pointer-events-auto flex-row justify-end p-4">
                 {showTopBtn && (
                   <div className="card-actions justify-end">
                     <button
@@ -69,7 +69,7 @@ const BottomMenu: React.FC<BottomMenuProps> = ({ setIsOpen, isOpen }) => {
                 <div className="card-actions justify-end">
                   <button
                     aria-label="Open menu button"
-                    className="btn-ghost btn-square  btn xl:hidden"
+                    className="btn-ghost btn-square btn  text-accent xl:hidden"
                     onClick={() => setIsOpen(true)}
                   >
                     <svg

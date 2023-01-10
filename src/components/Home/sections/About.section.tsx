@@ -132,7 +132,7 @@ const About = () => {
               {`Thank you for visiting my page!`}
             </p>
             <a
-              className="btn-accent btn ml-auto mr-0 hidden  text-base font-semibold text-base-100 lg:flex"
+              className="btn-accent btn mr-auto ml-0   mt-6 flex text-base font-semibold text-base-100"
               href="#"
             >
               <svg
