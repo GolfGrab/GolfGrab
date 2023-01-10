@@ -10,12 +10,12 @@ const ThemeSwitch = () => {
   }, []);
 
   if (!mounted) {
-    return null;
+    return <ThemeSwitchSkeleton />;
   }
   return (
     <>
       <div className="form-control pr-4">
-        <label className="swap swap-rotate">
+        <label className="swap-rotate swap">
           <input
             aria-label="Toggle Dark Mode"
             type="checkbox"
@@ -54,6 +54,10 @@ const ThemeSwitch = () => {
       </div>
     </>
   );
+};
+
+const ThemeSwitchSkeleton = () => {
+  return <div className="btn-ghost btn-square btn pr-4"></div>;
 };
 
 export default ThemeSwitch;
