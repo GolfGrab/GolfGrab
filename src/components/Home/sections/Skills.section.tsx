@@ -1,11 +1,18 @@
 import { motion } from "framer-motion";
 import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 import CompactCard from "../../elements/CompactCard";
 import SectionHeader from "../../elements/SectionHeader";
 import { BrandIconFramer } from "../svg/brandIcon";
 
 const Skills = () => {
   const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+  // useEffect only runs on the client, so now we can safely show the UI
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   const propsSvg = {
     initial: { transform: "scale(0)" },
     whileInView: {
@@ -124,13 +131,15 @@ const Skills = () => {
               />
               <CompactCard
                 figure={
-                  <motion.img
-                    {...propsSvg}
-                    src="https://raw.githubusercontent.com/gin-gonic/logo/master/wb.svg"
-                    className={`${
-                      theme === "black" ? "invert" : ""
-                    } h-6  lg:h-10  `}
-                  />
+                  mounted && (
+                    <motion.img
+                      {...propsSvg}
+                      src="https://raw.githubusercontent.com/gin-gonic/logo/master/wb.svg"
+                      className={`${
+                        theme === "black" ? "invert" : ""
+                      } h-6  lg:h-10  `}
+                    />
+                  )
                 }
                 title="Gin-Gonic"
                 description="Beginner"

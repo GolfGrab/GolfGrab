@@ -1,12 +1,21 @@
 import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 const ThemeSwitch = () => {
   const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+  // useEffect only runs on the client, so now we can safely show the UI
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
+  if (!mounted) {
+    return null;
+  }
   return (
     <>
       <div className="form-control pr-4">
-        <label className="swap-rotate swap">
+        <label className="swap swap-rotate">
           <input
             aria-label="Toggle Dark Mode"
             type="checkbox"
