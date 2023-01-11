@@ -19,6 +19,7 @@ const SectionTracker: React.FC<SectionTrackerProps> = ({
   useEffect(() => {
     if (isInView) {
       setSection?.(sectionName);
+      history.pushState(null, "", `#${sectionName}`);
     }
   }, [isInView, sectionName, setSection]);
 

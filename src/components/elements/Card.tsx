@@ -15,12 +15,12 @@ const Card: React.FC<CardProps> = ({
 }) => {
   return (
     <div
-      className={`card-compact card w-96 bg-base-100 shadow-xl ${exClassName}`}
+      className={`card card-compact w-96 bg-base-100 shadow-xl ${exClassName}`}
     >
       <figure>{figure}</figure>
       <div className="card-body">
         <h2 className="card-title">{title}</h2>
-        <p>I{description}</p>
+        <p>{description}</p>
         <div className="card-actions justify-end">{action}</div>
       </div>
     </div>
