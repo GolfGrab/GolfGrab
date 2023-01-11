@@ -43,7 +43,9 @@ const Navbar = () => {
             </ul>
             <a
               className="btn-accent btn mx-4 hidden text-base font-semibold text-base-100 md:inline-flex"
-              href="#"
+              href="/Surapus-GolfGrab-Resume.pdf"
+              target="_blank"
+              rel="noreferrer"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

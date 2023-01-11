@@ -133,7 +133,9 @@ const About = () => {
             </p>
             <a
               className="btn-accent btn mr-auto ml-0   mt-6 flex text-base font-semibold text-base-100"
-              href="#"
+              href="/Surapus-GolfGrab-Resume.pdf"
+              target="_blank"
+              rel="noreferrer"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
