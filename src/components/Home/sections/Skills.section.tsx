@@ -43,62 +43,53 @@ const Skills = () => {
               <CompactCard
                 figure={brandIconFramer[0]?.iconSVG}
                 title={brandIconFramer[0]?.iconName}
-                description="Intermediate"
                 fixWidth={true}
               />
               <CompactCard
                 figure={brandIconFramer[3]?.iconSVG}
                 title={brandIconFramer[3]?.iconName}
-                description="Familiarity"
                 fixWidth={true}
               />
 
               <CompactCard
                 figure={brandIconFramer[1]?.iconSVG}
                 title={brandIconFramer[1]?.iconName}
-                description="Intermediate"
                 fixWidth={true}
               />
               <CompactCard
                 figure={brandIconFramer[2]?.iconSVG}
                 title={brandIconFramer[2]?.iconName}
-                description="Beginner"
                 fixWidth={true}
               />
               <CompactCard
                 figure={brandIconFramer[4]?.iconSVG}
                 title={brandIconFramer[4]?.iconName}
-                description="Familiarity"
                 fixWidth={true}
               />
             </div>
           </motion.div>
-          {/* programing language end */}
+          {/* programming language end */}
           <motion.div className="flex w-full max-w-[30rem] flex-1 flex-col gap-2">
-            <h2 className=" pt-5 text-center text-2xl">PROGRAMING LANGUAGE</h2>
+            <h2 className=" pt-5 text-center text-2xl">PROGRAMMING LANGUAGE</h2>
             <div className="flex flex-row  flex-wrap justify-center gap-2">
               <CompactCard
                 figure={brandIconFramer[5]?.iconSVG}
                 title={brandIconFramer[5]?.iconName}
-                description="Intermediate"
                 fixWidth={true}
               />
               <CompactCard
                 figure={brandIconFramer[6]?.iconSVG}
                 title={brandIconFramer[6]?.iconName}
-                description="Intermediate"
                 fixWidth={true}
               />
               <CompactCard
                 figure={brandIconFramer[7]?.iconSVG}
                 title={brandIconFramer[7]?.iconName}
-                description="Intermediate"
                 fixWidth={true}
               />
               <CompactCard
                 figure={brandIconFramer[8]?.iconSVG}
                 title={brandIconFramer[8]?.iconName}
-                description="Beginner"
                 fixWidth={true}
               />
             </div>
@@ -108,25 +99,21 @@ const Skills = () => {
             <h2 className=" pt-5 text-center text-2xl">
               BACK END <br />
             </h2>
-            <h3 className=" text-center ">[ low interested at this time ]</h3>
             <div className="flex flex-row  flex-wrap justify-center gap-2">
               <CompactCard
                 figure={brandIconFramer[12]?.iconSVG}
                 title={brandIconFramer[12]?.iconName}
-                description="Intermediate"
                 fixWidth={true}
               />
               <CompactCard
                 figure={brandIconFramer[11]?.iconSVG}
                 title={brandIconFramer[11]?.iconName}
-                description="Beginner"
                 fixWidth={true}
               />
 
               <CompactCard
                 figure={brandIconFramer[10]?.iconSVG}
                 title={brandIconFramer[10]?.iconName}
-                description="Intermediate"
                 fixWidth={true}
               />
               <CompactCard
@@ -142,13 +129,11 @@ const Skills = () => {
                   )
                 }
                 title="Gin-Gonic"
-                description="Beginner"
                 fixWidth={true}
               />
               <CompactCard
                 figure={brandIconFramer[9]?.iconSVG}
                 title={brandIconFramer[9]?.iconName}
-                description="Intermediate"
                 fixWidth={true}
               />
             </div>

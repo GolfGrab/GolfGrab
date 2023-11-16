@@ -63,6 +63,14 @@ const Projects = () => {
                   hrefWebsite="https://www.youtube.com/watch?v=GHTA143_b-s"
                   key="NestJS PostgreSQL Docker"
                 />,
+                <CardProject
+                  title="reservebook Hotel Booking website"
+                  description="ReactJS NextJS TailwindCSS RestAPI MongoDB"
+                  imgSrc="/reservebook.png"
+                  hrefGithub="https://github.com/GolfGrab/reservebook"
+                  hrefWebsite="https://reservebook.vercel.app/"
+                  key="ReactJS NextJS TailwindCSS RestAPI MongoDB"
+                />,
               ].map((item, index) => (
                 <PopupWhileInViewport key={index} idx={index}>
                   {item}
