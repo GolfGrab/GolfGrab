@@ -133,7 +133,7 @@ const About = () => {
             </p>
             <a
               className="btn-accent btn mr-auto ml-0   mt-6 flex text-base font-semibold text-base-100"
-              href="/Surapus-GolfGrab-Resume.pdf"
+              href="/surapus_resume.pdf"
               target="_blank"
               rel="noreferrer"
             >
