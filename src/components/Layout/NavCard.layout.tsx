@@ -159,7 +159,7 @@ const NavCard: React.FC<NavCardProps> = ({ isOpen, setIsOpen }) => {
                   <li>
                     <a
                       className="w-[25vw] flex-col"
-                      href="/surapus_resume.pdf"
+                      href="/Surapus_Moonjaras_Resume_Nov_2023.pdf"
                       target="_blank"
                       rel="noreferrer"
                       onClick={() => setIsOpen(false)}

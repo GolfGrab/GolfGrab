@@ -20,7 +20,7 @@ const About = () => {
           {/* text side */}
           <motion.div className="flex flex-1 flex-col">
             <div className="flex flex-row gap-2">
-              <div className="card-compact card flex-1 bg-base-100 shadow-xl">
+              <div className="card card-compact flex-1 bg-base-100 shadow-xl">
                 <figure className="px-4 pt-4">
                   <motion.svg
                     initial={{ transform: "scale(0)" }}
@@ -54,7 +54,7 @@ const About = () => {
                   <p className=" mx-auto text-xs lg:text-sm">dev fast</p>
                 </div>
               </div>
-              <div className="card-compact card flex-1 bg-base-100 shadow-xl">
+              <div className="card card-compact flex-1 bg-base-100 shadow-xl">
                 <figure className="px-4 pt-4">
                   <motion.svg
                     initial={{ transform: "scale(0)" }}
@@ -88,7 +88,7 @@ const About = () => {
                   <p className=" mx-auto text-xs lg:text-sm">smart</p>
                 </div>
               </div>
-              <div className="card-compact card flex-1 bg-base-100 shadow-xl">
+              <div className="card card-compact flex-1 bg-base-100 shadow-xl">
                 <figure className="px-4 pt-4">
                   <motion.svg
                     initial={{ transform: "scale(0)" }}
@@ -133,7 +133,7 @@ const About = () => {
             </p>
             <a
               className="btn-accent btn mr-auto ml-0   mt-6 flex text-base font-semibold text-base-100"
-              href="/surapus_resume.pdf"
+              href="/Surapus_Moonjaras_Resume_Nov_2023.pdf"
               target="_blank"
               rel="noreferrer"
             >
