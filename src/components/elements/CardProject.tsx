@@ -22,9 +22,9 @@ const CardProject: React.FC<CardProjectProps> = ({
       figure={
         <Image
           src={imgSrc}
-          width={500}
-          height={500}
-          alt="GolfGrab portrait"
+          width={1000}
+          height={1000}
+          alt={title}
           className="aspect-video  object-cover"
         />
       }

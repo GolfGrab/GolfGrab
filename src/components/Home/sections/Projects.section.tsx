@@ -16,6 +16,41 @@ const Projects = () => {
           <motion.div className="flex w-full  flex-1 flex-col gap-2 pt-10">
             <div className="flex flex-row  flex-wrap justify-center gap-10 p-3">
               {[
+                // BARCAMP BANGKHEN EVENT | Repo | Website       	Bangkok, Thailand
+                // Front-End Team Leader   	October 2023 – Present
+                // Contributed to the development of a responsive and engaging promotional website for the Barcamp Bangkhen event, enhancing online visibility, and cross-device accessibility.
+                // Technologies Used: ReactJS, NextJS, HTML, CSS, and Tailwind
+
+                <CardProject
+                  title="Barcamp Bangkhen Event website"
+                  description="ReactJS NextJS TailwindCSS"
+                  imgSrc="/barcamp.png"
+                  hrefGithub="https://github.com/barcamp-bangkhen-11/bcbk11-frontend"
+                  hrefWebsite="https://www.barcampbangkhen.com/"
+                  key="barcamp bangkhen"
+                />,
+                //                 MeeOrder - Point of Sale (POS) Web App | Repo      	Bangkok, Thailand
+                // Front-End Team Leader       	June 2023 – November 2023
+                // Led a 13-member team in successfully delivering a restaurant management and customer ordering web application.
+                // Ensured the maintainability of a highly committed codebase with consistent coding practices, peek 98 commits per week.
+                // Actively incorporated weekly user feedback, contributing over 173 Git commits, ensuring continuous improvement and alignment with evolving user needs.
+                // Technologies Used: ReactJS, NextJS, HTML, CSS, Styled-Components, Ant Design, Zustand, and REST API.
+                <CardProject
+                  title="MeeOrder - Point of Sale (POS) Web App"
+                  description="ReactJS NextJS TailwindCSS"
+                  imgSrc="/meeorder-combo.png"
+                  hrefGithub="https://github.com/meeorder/meeorder-frontend"
+                  key="meeorder"
+                />,
+
+                <CardProject
+                  title="reservebook Hotel Booking website"
+                  description="ReactJS NextJS TailwindCSS RestAPI MongoDB"
+                  imgSrc="/reservebook.png"
+                  hrefGithub="https://github.com/GolfGrab/reservebook"
+                  hrefWebsite="https://reservebook.vercel.app/"
+                  key="ReactJS NextJS TailwindCSS RestAPI MongoDB"
+                />,
                 <CardProject
                   title="Parcel Delivery status checker website [SPA]"
                   description="Version 1 ReactJS NextJS TailwindCSS graphqlAPI CMS(Hygraph)"
@@ -62,14 +97,6 @@ const Projects = () => {
                   hrefGithub="https://github.com/GolfGrab/nestjs-api-learn"
                   hrefWebsite="https://www.youtube.com/watch?v=GHTA143_b-s"
                   key="NestJS PostgreSQL Docker"
-                />,
-                <CardProject
-                  title="reservebook Hotel Booking website"
-                  description="ReactJS NextJS TailwindCSS RestAPI MongoDB"
-                  imgSrc="/reservebook.png"
-                  hrefGithub="https://github.com/GolfGrab/reservebook"
-                  hrefWebsite="https://reservebook.vercel.app/"
-                  key="ReactJS NextJS TailwindCSS RestAPI MongoDB"
                 />,
               ].map((item, index) => (
                 <PopupWhileInViewport key={index} idx={index}>
