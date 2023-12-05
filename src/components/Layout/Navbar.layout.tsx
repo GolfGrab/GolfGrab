@@ -43,7 +43,7 @@ const Navbar = () => {
             </ul>
             <a
               className="btn-accent btn mx-4 hidden text-base font-semibold text-base-100 md:inline-flex"
-              href="/Surapus_Moonjaras_Resume_Nov_2023.pdf"
+              href="/Surapus_Resume_06_Dec_2023.pdf"
               target="_blank"
               rel="noreferrer"
             >
