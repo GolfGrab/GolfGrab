@@ -1,4 +1,4 @@
-import { Montserrat } from "@next/font/google";
+import { Montserrat } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import { type AppType } from "next/dist/shared/lib/utils";
 import { SectionProvider } from "../contexts/SectionContext";
