@@ -118,7 +118,6 @@ type PopupWhileInViewportProps = {
 
 const PopupWhileInViewport: React.FC<PopupWhileInViewportProps> = ({
   children,
-  idx = 0,
 }) => {
   return (
     <motion.div
@@ -127,12 +126,12 @@ const PopupWhileInViewport: React.FC<PopupWhileInViewportProps> = ({
         transform: "scale(1)",
         transition: {
           duration: 1,
-          delay: 0.2 + idx * 0.1,
+          delay: 0.05,
           type: "spring",
-          stiffness: 50,
+          stiffness: 100,
         },
       }}
-      viewport={{ once: true }}
+      viewport={{ once: true, margin: "100px" }}
       transition={{ duration: 1 }}
       className="flex flex-col items-center justify-center"
     >
