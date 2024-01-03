@@ -6,14 +6,16 @@ type CardProjectProps = {
   imgSrc: string;
   title: string;
   description: string;
+  utilize?: string;
   hrefWebsite?: string;
-  hrefGithub: string;
+  hrefGithub?: string;
 };
 
 const CardProject: React.FC<CardProjectProps> = ({
   imgSrc,
   title,
   description,
+  utilize,
   hrefWebsite,
   hrefGithub,
 }) => {
@@ -30,6 +32,7 @@ const CardProject: React.FC<CardProjectProps> = ({
       }
       title={title}
       description={description}
+      subDescription={utilize}
       action={
         <>
           {hrefWebsite && (
